@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block title %}Weekly Schedule | Aegis Forge Fitness{% endblock %}
+
+{% block content %}
+<section class="page-header schedule-header">
+    <div class="container">
+        <h1>Weekly Schedule</h1>
+        <p>Find the perfect time to forge your strength.</p>
+    </div>
+</section>
+
+<section class="schedule-section">
+    <div class="container">
+        <div class="table-responsive">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="time-col">06:00 AM</td>
+                        <td><div class="schedule-cell hiit">HIIT Forge<br><span>David</span></div></td>
+                        <td></td>
+                        <td><div class="schedule-cell hiit">HIIT Forge<br><span>David</span></div></td>
+                        <td><div class="schedule-cell spin">Apex Spin<br><span>Sarah</span></div></td>
+                        <td><div class="schedule-cell hiit">HIIT Forge<br><span>David</span></div></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">08:00 AM</td>
+                        <td><div class="schedule-cell yoga">Zenith Yoga<br><span>Elena</span></div></td>
+                        <td><div class="schedule-cell strength">Titan Strength<br><span>Marcus</span></div></td>
+                        <td><div class="schedule-cell yoga">Zenith Yoga<br><span>Elena</span></div></td>
+                        <td><div class="schedule-cell strength">Titan Strength<br><span>Marcus</span></div></td>
+                        <td><div class="schedule-cell yoga">Zenith Yoga<br><span>Elena</span></div></td>
+                        <td><div class="schedule-cell hiit">HIIT Forge<br><span>David</span></div></td>
+                        <td><div class="schedule-cell yoga">Zenith Yoga<br><span>Elena</span></div></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">12:00 PM</td>
+                        <td><div class="schedule-cell spin">Apex Spin<br><span>Sarah</span></div></td>
+                        <td><div class="schedule-cell hiit">HIIT Forge<br><span>David</span></div></td>
+                        <td><div class="schedule-cell spin">Apex Spin<br><span>Sarah</span></div></td>
+                        <td><div class="schedule-cell hiit">HIIT Forge<br><span>David</span></div></td>
+                        <td><div class="schedule-cell spin">Apex Spin<br><span>Sarah</span></div></td>
+                        <td><div class="schedule-cell strength">Titan Strength<br><span>Marcus</span></div></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">05:30 PM</td>
+                        <td><div class="schedule-cell strength">Titan Strength<br><span>Marcus</span></div></td>
+                        <td><div class="schedule-cell yoga">Zenith Yoga<br><span>Elena</span></div></td>
+                        <td><div class="schedule-cell strength">Titan Strength<br><span>Marcus</span></div></td>
+                        <td><div class="schedule-cell yoga">Zenith Yoga<br><span>Elena</span></div></td>
+                        <td><div class="schedule-cell hiit">HIIT Forge<br><span>David</span></div></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="time-col">07:00 PM</td>
+                        <td><div class="schedule-cell hiit">HIIT Forge<br><span>David</span></div></td>
+                        <td><div class="schedule-cell spin">Apex Spin<br><span>Sarah</span></div></td>
+                        <td><div class="schedule-cell hiit">HIIT Forge<br><span>David</span></div></td>
+                        <td><div class="schedule-cell spin">Apex Spin<br><span>Sarah</span></div></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+{% endblock %}

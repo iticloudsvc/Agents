@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Aegis Forge Fitness{% endblock %}</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- 3D Background Canvas -->
+    <canvas id="three-bg"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <i class="fa-solid fa-dumbbell"></i> AEGIS FORGE
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/pricing">Memberships</a></li>
+                <li><a href="/classes">Classes</a></li>
+                <li><a href="/schedule">Schedule</a></li>
+                <li><a href="/team">Trainers</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="page-transition">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>AEGIS FORGE FITNESS</h3>
+                <p>Forging strength, resilience, and vitality. Join the elite.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="/pricing">Memberships</a>
+                <a href="/classes">Classes</a>
+                <a href="/schedule">Schedule</a>
+                <a href="/team">Trainers</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 1042 Ironclad Blvd, Metro City, NY 10001</p>
+                <p><i class="fa-solid fa-phone"></i> (555) 234-5678</p>
+                <p><i class="fa-solid fa-envelope"></i> hello@aegisforgefitness.com</p>
+            </div>
+            <div class="footer-hours">
+                <h4>Hours</h4>
+                <p>Mon - Fri: 5:00 AM - 11:00 PM</p>
+                <p>Sat - Sun: 6:00 AM - 9:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aegis Forge Fitness. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget">
+        <div class="chatbot-header">
+            <span><i class="fa-solid fa-robot"></i> ForgeBot Support</span>
+            <button id="chatbot-toggle"><i class="fa-solid fa-chevron-up"></i></button>
+        </div>
+        <div class="chatbot-body" id="chatbot-body">
+            <div class="chat-message bot">
+                Hi there! I'm ForgeBot. Ask me about memberships, classes, hours, or trainers!
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chat-input" placeholder="Type your message...">
+            <button id="chat-send"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/three_bg.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

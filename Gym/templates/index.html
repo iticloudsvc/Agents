@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Home | Aegis Forge Fitness{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="glitch-text" data-text="FORGE YOUR LEGACY">FORGE YOUR LEGACY</h1>
+        <p>State-of-the-art equipment, world-class trainers, and an unbreakable community.</p>
+        <div class="hero-buttons">
+            <a href="/pricing" class="btn btn-primary">Join Now</a>
+            <a href="/classes" class="btn btn-secondary">Explore Classes</a>
+        </div>
+    </div>
+</section>
+
+<section class="highlights">
+    <div class="container">
+        <h2 class="section-title">Why Choose Aegis Forge?</h2>
+        <div class="grid-3">
+            <div class="highlight-card">
+                <i class="fa-solid fa-dumbbell highlight-icon"></i>
+                <h3>Premium Equipment</h3>
+                <p>Train with the best. We feature Eleiko barbells, Rogue racks, and top-tier cardio machines to push your limits.</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fa-solid fa-users highlight-icon"></i>
+                <h3>Expert Coaching</h3>
+                <p>Our trainers aren't just staff; they are elite athletes and certified specialists dedicated to your success.</p>
+            </div>
+            <div class="highlight-card">
+                <i class="fa-solid fa-heart-pulse highlight-icon"></i>
+                <h3>Dynamic Classes</h3>
+                <p>From high-intensity intervals to restorative yoga, our diverse schedule keeps your body guessing and growing.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="image-banner">
+    <div class="banner-content">
+        <h2>Unleash Your Potential</h2>
+        <p>No excuses. Just results. Step into the Forge today.</p>
+    </div>
+</section>
+{% endblock %}

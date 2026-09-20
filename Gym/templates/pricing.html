@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Memberships | Aegis Forge Fitness{% endblock %}
+
+{% block content %}
+<section class="page-header pricing-header">
+    <div class="container">
+        <h1>Membership Tiers</h1>
+        <p>Choose the plan that fits your goals. No hidden fees. No nonsense.</p>
+    </div>
+</section>
+
+<section class="pricing-section">
+    <div class="container">
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3 class="tier-name">Base</h3>
+                <div class="price"><span>$</span>49<span>/mo</span></div>
+                <ul class="features">
+                    <li><i class="fa-solid fa-check"></i> 24/7 Gym Floor Access</li>
+                    <li><i class="fa-solid fa-check"></i> Cardio & Weight Areas</li>
+                    <li><i class="fa-solid fa-check"></i> Luxury Locker Rooms</li>
+                    <li class="disabled"><i class="fa-solid fa-xmark"></i> Group Classes</li>
+                    <li class="disabled"><i class="fa-solid fa-xmark"></i> Personal Training</li>
+                </ul>
+                <a href="#" class="btn btn-outline">Select Base</a>
+            </div>
+
+            <div class="pricing-card popular">
+                <div class="popular-badge">Most Popular</div>
+                <h3 class="tier-name">Pro</h3>
+                <div class="price"><span>$</span>79<span>/mo</span></div>
+                <ul class="features">
+                    <li><i class="fa-solid fa-check"></i> All Base Features</li>
+                    <li><i class="fa-solid fa-check"></i> Unlimited Group Classes</li>
+                    <li><i class="fa-solid fa-check"></i> 1 Guest Pass / Month</li>
+                    <li><i class="fa-solid fa-check"></i> Advanced Analytics App</li>
+                    <li class="disabled"><i class="fa-solid fa-xmark"></i> Personal Training</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Select Pro</a>
+            </div>
+
+            <div class="pricing-card">
+                <h3 class="tier-name">Elite</h3>
+                <div class="price"><span>$</span>129<span>/mo</span></div>
+                <ul class="features">
+                    <li><i class="fa-solid fa-check"></i> All Pro Features</li>
+                    <li><i class="fa-solid fa-check"></i> 2 PT Sessions / Month</li>
+                    <li><i class="fa-solid fa-check"></i> Sauna & Recovery Room</li>
+                    <li><i class="fa-solid fa-check"></i> Priority Class Booking</li>
+                    <li><i class="fa-solid fa-check"></i> 4 Guest Passes / Month</li>
+                </ul>
+                <a href="#" class="btn btn-outline">Select Elite</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
