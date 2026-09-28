@@ -60,13 +60,13 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (msg.includes('hour') || msg.includes('time') || msg.includes('open') || msg.includes('close')) {
             return "We are open Monday to Friday from 5:00 AM to 11:00 PM, and on weekends from 6:00 AM to 9:00 PM.";
         } else if (msg.includes('class') || msg.includes('yoga') || msg.includes('hiit') || msg.includes('spin')) {
-            return "We offer a variety of classes including HIIT Forge, Zenith Yoga, Apex Spin, and Titan Strength. Check out our Classes and Schedule pages to see when they run!";
+            return "We offer a variety of classes including HIIT Revora, Zenith Yoga, Apex Spin, and Titan Strength. Check out our Classes and Schedule pages to see when they run!";
         } else if (msg.includes('location') || msg.includes('where') || msg.includes('address')) {
             return "We are located at 1042 Ironclad Blvd, Metro City, NY 10001.";
         } else if (msg.includes('personal training') || msg.includes('trainer') || msg.includes('coach') || msg.includes('pt')) {
             return "Yes! Our elite trainers, including Marcus, Elena, and David, are available for personal training. The Elite membership includes 2 PT sessions per month.";
         } else if (msg.includes('hello') || msg.includes('hi ') || msg.includes('hey')) {
-            return "Hello! How can I help you forge your legacy today?";
+            return "Hello! How can I help you transform your fitness goals today?";
         } else if (msg.includes('free trial') || msg.includes('guest') || msg.includes('try')) {
             return "Our Pro plan includes 1 guest pass per month, and Elite includes 4. Drop by the front desk if you'd like to arrange a 1-day free trial!";
         } else {
