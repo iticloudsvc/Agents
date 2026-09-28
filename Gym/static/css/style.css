@@ -224,7 +224,8 @@ ul {
     display: flex;
     position: relative;
     height: 480px;
-    max-width: 500px;
+    max-width: 480px;
+    margin-left: -25px;
     pointer-events: auto;
 }
 
@@ -244,18 +245,18 @@ ul {
 }
 
 .hero-img-card.male-card {
-    width: 260px;
-    height: 380px;
+    width: 255px;
+    height: 375px;
     top: 20px;
-    left: 0;
+    left: -15px;
     z-index: 2;
 }
 
 .hero-img-card.female-card {
-    width: 250px;
-    height: 370px;
+    width: 245px;
+    height: 365px;
     bottom: 10px;
-    right: 20px;
+    right: 10px;
     z-index: 3;
 }
 
@@ -1064,6 +1065,40 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .hero-wrapper {
+        padding-top: 90px;
+        padding-bottom: 30px;
+        gap: 20px;
+    }
+    .hero-left-graphics {
+        width: 100%;
+        max-width: 320px;
+        height: 310px;
+        margin: 15px auto 5px auto;
+    }
+    .hero-img-card.male-card {
+        width: 175px;
+        height: 250px;
+        top: 10px;
+        left: 0px;
+    }
+    .hero-img-card.female-card {
+        width: 165px;
+        height: 240px;
+        bottom: 5px;
+        right: 0px;
+    }
+    .hero-stat-badge {
+        top: -15px;
+        right: 5px;
+        padding: 8px 14px;
+    }
+    .hero-stat-badge .stat-num {
+        font-size: 1.2rem;
+    }
+    .hero-stat-badge .stat-lbl {
+        font-size: 0.6rem;
+    }
     .nav-links {
         display: none;
         flex-direction: column;
@@ -1088,7 +1123,7 @@ footer {
         flex-direction: column;
     }
     .glitch-text {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
     .footer-container {
         grid-template-columns: 1fr;
