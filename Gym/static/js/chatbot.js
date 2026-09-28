@@ -6,8 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatInputField = document.getElementById('chat-input');
     const chatSendBtn = document.getElementById('chat-send');
 
+    const chatbotHeader = document.querySelector('.chatbot-header');
+
     // Toggle chatbot visibility
-    chatbotToggle.addEventListener('click', () => {
+    const toggleChat = () => {
         const isCollapsed = chatbotBody.classList.contains('collapsed');
         if (isCollapsed) {
             chatbotBody.classList.remove('collapsed');
@@ -18,7 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
             chatbotInput.classList.add('collapsed');
             chatbotToggle.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
         }
-    });
+    };
+
+    chatbotHeader.addEventListener('click', toggleChat);
 
     // Handle sending messages
     const sendMessage = () => {
