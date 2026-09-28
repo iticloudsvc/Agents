@@ -187,13 +187,13 @@ ul {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    text-align: center;
     background: transparent;
+    overflow: hidden;
 }
 
 .hero-overlay {
@@ -202,37 +202,195 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(10,10,10,0.3), rgba(10,10,10,0.8));
+    background: linear-gradient(to bottom, rgba(10,10,10,0.3), rgba(10,10,10,0.85));
     pointer-events: none;
 }
 
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    z-index: 2;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+/* Hero Left Graphics (Man & Woman Gym Bodies) */
+.hero-left-graphics {
+    flex: 1;
+    display: flex;
+    position: relative;
+    height: 480px;
+    max-width: 500px;
+    pointer-events: auto;
+}
+
+.hero-img-card {
+    position: absolute;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.8), 0 0 25px rgba(217, 37, 37, 0.4);
+    border: 2px solid rgba(217, 37, 37, 0.6);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-img-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(217, 37, 37, 0.7);
+    border-color: var(--primary);
+}
+
+.hero-img-card.male-card {
+    width: 260px;
+    height: 380px;
+    top: 20px;
+    left: 0;
+    z-index: 2;
+}
+
+.hero-img-card.female-card {
+    width: 250px;
+    height: 370px;
+    bottom: 10px;
+    right: 20px;
+    z-index: 3;
+}
+
+.hero-body-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9) contrast(1.1);
+    transition: filter 0.3s ease;
+}
+
+.hero-img-card:hover .hero-body-img {
+    filter: brightness(1.05) contrast(1.15);
+}
+
+.img-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.img-badge i {
+    color: var(--primary);
+}
+
+.img-badge.badge-red {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.img-badge.badge-red i {
+    color: #fff;
+}
+
+.hero-stat-badge {
+    position: absolute;
+    top: -10px;
+    right: 40px;
+    z-index: 4;
+    background: linear-gradient(135deg, #1f1f1f, #111111);
+    border: 2px solid var(--primary);
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(217, 37, 37, 0.5);
+}
+
+.hero-stat-badge .stat-num {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--primary);
+    font-family: var(--font-heading);
+}
+
+.hero-stat-badge .stat-lbl {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+/* Right Content */
 .hero-content {
+    flex: 1;
     position: relative;
     z-index: 2;
-    max-width: 800px;
-    padding: 0 20px;
-    pointer-events: none;
+    max-width: 600px;
+    text-align: left;
+}
+
+.hero-tagline {
+    display: inline-block;
+    color: var(--primary);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
 }
 
 .glitch-text {
-    font-size: 4.5rem;
+    font-size: 4rem;
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     position: relative;
     text-shadow: 2px 2px 0px var(--primary);
+    line-height: 1.1;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
     color: #ccc;
+}
+
+.hero-stats-row {
+    display: flex;
+    gap: 25px;
+    margin: 25px 0 35px;
+}
+
+.hero-stats-row .stat-item {
+    border-left: 3px solid var(--primary);
+    padding-left: 12px;
+}
+
+.hero-stats-row .stat-item h4 {
+    font-size: 1.6rem;
+    color: #fff;
+    margin: 0;
+    font-family: var(--font-heading);
+}
+
+.hero-stats-row .stat-item p {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin: 0;
 }
 
 .hero-buttons {
     display: flex;
-    justify-content: center;
     gap: 15px;
-    pointer-events: auto;
 }
 
 /* Highlights */
@@ -859,6 +1017,35 @@ footer {
 
 /* Responsive */
 @media (max-width: 992px) {
+    .hero-wrapper {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 110px;
+    }
+    .hero-content {
+        text-align: center;
+        max-width: 100%;
+    }
+    .hero-stats-row {
+        justify-content: center;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .hero-left-graphics {
+        width: 100%;
+        max-width: 420px;
+        height: 380px;
+        margin: 0 auto;
+    }
+    .hero-img-card.male-card {
+        width: 210px;
+        height: 300px;
+    }
+    .hero-img-card.female-card {
+        width: 200px;
+        height: 290px;
+    }
     .grid-3 {
         grid-template-columns: repeat(2, 1fr);
     }

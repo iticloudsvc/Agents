@@ -5,12 +5,48 @@
 {% block content %}
 <section class="hero">
     <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1 class="glitch-text" data-text="BUILD YOUR LEGACY">BUILD YOUR LEGACY</h1>
-        <p>State-of-the-art equipment, world-class trainers, and an unbreakable community.</p>
-        <div class="hero-buttons">
-            <a href="/pricing" class="btn btn-primary">Join Now</a>
-            <a href="/classes" class="btn btn-secondary">Explore Classes</a>
+    <div class="hero-wrapper container">
+        <!-- Left Side: Man & Woman Gym Body Graphics -->
+        <div class="hero-left-graphics">
+            <div class="hero-img-card male-card">
+                <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop" alt="Male Fitness Athlete" class="hero-body-img">
+                <div class="img-badge"><i class="fa-solid fa-fire"></i> STRENGTH</div>
+            </div>
+            <div class="hero-img-card female-card">
+                <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=800&auto=format&fit=crop" alt="Female Fitness Athlete" class="hero-body-img">
+                <div class="img-badge badge-red"><i class="fa-solid fa-bolt"></i> ENDURANCE</div>
+            </div>
+            <div class="hero-stat-badge">
+                <span class="stat-num">100%</span>
+                <span class="stat-lbl">TRANSFORMATION</span>
+            </div>
+        </div>
+
+        <!-- Right Side: Main Hero Content -->
+        <div class="hero-content">
+            <span class="hero-tagline"><i class="fa-solid fa-dumbbell"></i> WELCOME TO REVORA FITNESS</span>
+            <h1 class="glitch-text" data-text="BUILD YOUR LEGACY">BUILD YOUR LEGACY</h1>
+            <p>State-of-the-art equipment, world-class trainers, and an unbreakable community. Transform your mind, body, and spirit today.</p>
+            
+            <div class="hero-stats-row">
+                <div class="stat-item">
+                    <h4>500+</h4>
+                    <p>Active Members</p>
+                </div>
+                <div class="stat-item">
+                    <h4>15+</h4>
+                    <p>Expert Coaches</p>
+                </div>
+                <div class="stat-item">
+                    <h4>24/7</h4>
+                    <p>Access Available</p>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="/pricing" class="btn btn-primary">Join Now <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="/classes" class="btn btn-secondary">Explore Classes</a>
+            </div>
         </div>
     </div>
 </section>
